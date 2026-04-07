@@ -1,0 +1,27 @@
+{
+  "entities": {
+    "Correction": {
+      "title": "Correction",
+      "description": "Lịch sử chấm bài của học sinh",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "subject": { "type": "string", "enum": ["Vietnamese", "English"] },
+        "originalText": { "type": "string" },
+        "correctedText": { "type": "string" },
+        "highlights": { "type": "array", "items": { "type": "object" } },
+        "comment": { "type": "string" },
+        "stars": { "type": "number" },
+        "audioUrl": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "subject", "originalText", "correctedText", "stars", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/corrections/{correctionId}": {
+      "schema": "Correction",
+      "description": "Lưu trữ các bài chấm của học sinh"
+    }
+  }
+}

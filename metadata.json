@@ -1,0 +1,8 @@
+{
+  "name": "Cô Giáo AI - Chấm Bài Chính Tả song ngữ Anh -Việt",
+  "description": "Ứng dụng AI giúp học sinh tiểu học chấm bài chính tả Tiếng Việt và Tiếng Anh qua ảnh chụp hoặc bài viết của học sinh.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
